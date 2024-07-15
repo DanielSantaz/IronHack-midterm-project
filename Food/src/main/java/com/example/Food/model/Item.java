@@ -14,5 +14,45 @@ public class Item {
     private Integer calories;
     private Integer massInGrams;
 
+    public Item(Integer id, String name, Integer calories, Integer massInGrams) {
+        this.id = id;
+        this.name = name;
+        this.calories = calories;
+        this.massInGrams = massInGrams;
+    }
 
+    public Item() {
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Integer getCalories() {
+        return calories;
+    }
+
+    public void setCalories(Integer calories) {
+        this.calories = calories;
+    }
+
+    public Integer getMassInGrams() {
+        return massInGrams;
+    }
+
+    public void setMassInGrams(Integer massInGrams) {
+        this.massInGrams = massInGrams;
+    }
 }

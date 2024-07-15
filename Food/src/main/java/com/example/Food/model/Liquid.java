@@ -13,6 +13,24 @@ import java.util.Optional;
 public class Liquid extends Item{
     @Column(nullable = true)
     private Optional<Date> expirationDate;
+    private String container;
 
 
+    public Liquid(){}
+
+    public Optional<Date> getExpirationDate() {
+        return expirationDate;
+    }
+
+    public void setExpirationDate(Optional<Date> expirationDate) {
+        this.expirationDate = expirationDate;
+    }
+
+    public String getContainer() {
+        return container;
+    }
+
+    public void setContainer(String container) {
+        this.container = container;
+    }
 }

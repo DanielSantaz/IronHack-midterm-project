@@ -11,4 +11,14 @@ public class Food extends Item{
 
     private Date expirationDate;
 
+
+    public Food(){}
+
+    public Date getExpirationDate() {
+        return expirationDate;
+    }
+
+    public void setExpirationDate(Date expirationDate) {
+        this.expirationDate = expirationDate;
+    }
 }
