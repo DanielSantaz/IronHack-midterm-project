@@ -26,8 +26,11 @@ public class Item {
     private Fridge fridge;
 
 
+    public Item(int i, String name, int i1, int i2) {
+        id = i;
+        this.name = name;
+        caloriesPerGram = i1;
+        massInGrams = i2;
 
-
-
-
+    }
 }

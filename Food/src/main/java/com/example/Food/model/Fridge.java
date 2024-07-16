@@ -23,4 +23,14 @@ public class Fridge {
         Owner = owner;
         this.items = items;
     }
+
+
+    @Override
+    public String toString() {
+        return "Fridge{" +
+                "id=" + id +
+                ", Owner='" + Owner + '\'' +
+                ", items=" + items +
+                '}';
+    }
 }
