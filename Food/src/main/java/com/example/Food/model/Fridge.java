@@ -1,41 +1,26 @@
 package com.example.Food.model;
 
 import jakarta.persistence.*;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
 @Entity
+@Data
+@NoArgsConstructor
 public class Fridge {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
-
-
+    private String Owner;
     @OneToMany(cascade = CascadeType.ALL)
     private List<Item> items;
 
-    public Fridge() {
 
-    }
-
-    public Fridge(List<Item> items, Integer id) {
-        this.items = items;
+    public Fridge(Integer id, String owner, List<Item> items) {
         this.id = id;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public List<Item> getItems() {
-        return items;
-    }
-
-    public void setItems(List<Item> items) {
+        Owner = owner;
         this.items = items;
     }
 }
