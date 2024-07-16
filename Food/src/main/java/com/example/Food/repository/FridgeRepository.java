@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 
 
 @Repository
-public interface FridgeRepository extends JpaRepository<Integer, Fridge>{
+public interface FridgeRepository extends JpaRepository<Fridge, Integer>{
 
 
 }

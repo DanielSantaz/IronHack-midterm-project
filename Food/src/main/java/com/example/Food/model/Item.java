@@ -14,6 +14,10 @@ public class Item {
     private Integer calories;
     private Integer massInGrams;
 
+    @ManyToOne
+    @JoinColumn(name = "fridge_id")
+    private Fridge fridge;
+
     public Item(Integer id, String name, Integer calories, Integer massInGrams) {
         this.id = id;
         this.name = name;
