@@ -10,7 +10,7 @@ import java.util.List;
 @Repository
 public interface ItemRepository extends JpaRepository<Item, Integer> {
 
-    List<Item> findAllByCaloriesPerGramLess(Integer caloriesPerGram);
+    List<Item> findAllByCaloriesPerGramLessThan(Integer caloriesPerGram);
 
 
 }
