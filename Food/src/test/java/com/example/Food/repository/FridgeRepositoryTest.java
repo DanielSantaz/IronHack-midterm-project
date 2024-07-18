@@ -25,13 +25,17 @@ class FridgeRepositoryTest {
 
     @BeforeEach
     void setUp(){
-        Item item = new Item(4, "Pizza", 10, 300);
+
+
+
+
+        fridge = new Fridge(1, "Daniel");
+        Item item = new Item(4, "Pizza", 10, 300, fridge);
         itemRepository.save(item);
         List<Item> items = new ArrayList<>();
         items.add(item);
+        fridge.setItems(items);
 
-
-        fridge = new Fridge(1, "Daniel", items);
         System.out.println(fridge);
 
     }

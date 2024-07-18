@@ -13,15 +13,20 @@ public class Fridge {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
-    private String Owner;
+    private String owner;
     @OneToMany(cascade = CascadeType.ALL)
     private List<Item> items;
 
 
     public Fridge(Integer id, String owner, List<Item> items) {
         this.id = id;
-        Owner = owner;
+        this.owner = owner;
         this.items = items;
+    }
+
+    public Fridge(int i, String name) {
+        id = i;
+        owner = name;
     }
 
 
@@ -29,7 +34,7 @@ public class Fridge {
     public String toString() {
         return "Fridge{" +
                 "id=" + id +
-                ", Owner='" + Owner + '\'' +
+                ", Owner='" + owner + '\'' +
                 ", items=" + items +
                 '}';
     }
